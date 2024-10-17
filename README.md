@@ -1,4 +1,4 @@
-# python-kafka-protobuf-console
+# kafka-message-console
 
 This tool provides functionalities to produce and consume messages in both Protobuf and Avro formats to/from Kafka, as well as to validate and generate Protobuf descriptors.
 
