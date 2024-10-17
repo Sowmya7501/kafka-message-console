@@ -55,23 +55,3 @@ def protobuf_validate_message(descriptor, name):
         print("Message validated successfully.")
     else:
         print(f"Message validation failed with json error: {error}")
-
-# def parse_arguments():
-#     parser = argparse.ArgumentParser(description='Validate JSON message against Protobuf schema')
-#     parser.add_argument('--descriptor', type=str, required=True, help='File descriptor path')
-#     parser.add_argument('--name', type=str, required=True, help='Fully qualified Proto message name')
-#     parser.add_argument('--message', type=str, required=True, help='JSON message to validate')
-#     return parser.parse_args()
-
-# def main():
-#     args = parse_arguments()
-    
-#     # Load the message descriptor
-#     message_descriptor = load_message_descriptor(args.descriptor, args.name)
-    
-#     # Validate the message
-#     is_valid, error = validate_message(args.message, message_descriptor)
-#     if is_valid:
-#         print("Message validated successfully.")
-#     else:
-#         print(f"Validation failed: {error}")

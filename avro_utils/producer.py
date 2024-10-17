@@ -36,6 +36,7 @@ def avro_produce(brokers, topic, schema_file):
 
             # Generate the Avro message
             avro_message = generate_avro_message(schema_file, message_data)
+            
             # Produce the message to the Kafka topic
             future = producer.send(topic, value=avro_message)
 
@@ -47,32 +48,3 @@ def avro_produce(brokers, topic, schema_file):
 
     # Close the producer
     producer.close()
-
-"""
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='Enter the details')
-    parser.add_argument('--brokers', type=str, help='The Kafka broker address')
-    parser.add_argument('--schema', type=str, help='File descriptor path')
-    # parser.add_argument('--help', type=str, help='Help for produce')
-    parser.add_argument('--topic', type=str, help='Destination Kafka topic')
-    return parser.parse_args()
-
-if '__main__' == __name__:
-    args = parse_arguments()
-    kafka_brokers = args.brokers
-    schema_file = args.schema
-    kafka_topic = args.topic
-    
-    Example message data
-    message_data = {
-        "name": "John Doe",
-        "age": 30,
-        "email": "john.doe@example.com"
-    }
-    
-    # Generate the Avro message
-    # avro_message = generate_avro_message(schema_file, message_data)
-
-    # Produce the Avro message to Kafka
-    produce_to_kafka(kafka_brokers, kafka_topic, schema_file)
-    """

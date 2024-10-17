@@ -33,21 +33,3 @@ def avro_consume(brokers, topic, schema_file):
             print(json.dumps(decoded_message, indent=2))
     except KeyboardInterrupt:
         print("Interrupted Exciting...")
-
-"""
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='Enter the details')
-    parser.add_argument('--brokers', type=str, help='The Kafka broker address')
-    parser.add_argument('--schema', type=str, help='File descriptor path')
-    # parser.add_argument('--help', type=str, help='Help for produce')
-    parser.add_argument('--topic', type=str, help='Destination Kafka topic')
-    return parser.parse_args()
-
-if '__main__' == __name__:
-    args = parse_arguments()
-    kafka_brokers = args.brokers
-    schema_file = args.schema
-    kafka_topic = args.topic
-
-    consume_from_kafka(kafka_brokers, kafka_topic, schema_file)
-"""

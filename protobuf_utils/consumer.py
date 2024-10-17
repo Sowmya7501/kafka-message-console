@@ -66,24 +66,3 @@ def protobuf_consume(brokers, descriptor, name, topic):
         except KeyboardInterrupt:
             print("Interrupted by user, shutting down...")
             break
-        # except Exception as e:
-        #     print(f"Error: {e}")
-        #     time.sleep(5)  # Wait for a while before retrying
-
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='Enter the details')
-    parser.add_argument('--brokers', type=str, help='The Kafka broker address')
-    parser.add_argument('--descriptor', type=str, help='File descriptor path')
-    # parser.add_argument('--help', type=str, help='Help for produce')
-    parser.add_argument('--name', type=str, help='Fully qualified Proto message name')
-    parser.add_argument('--topic', type=str, help='Destination Kafka topic')
-    return parser.parse_args()
-
-if '__main__' == __name__:
-    args = parse_arguments()
-    kafka_brokers = args.brokers
-    descriptor_file = args.descriptor
-    message_name = args.name
-    kafka_topic = args.topic
-
-    consume(kafka_brokers, descriptor_file, message_name, kafka_topic)

@@ -22,16 +22,3 @@ def generate_descriptor(proto_file, descriptor_file):
         print(result.stderr)
     else:
         print("Descriptor file generated successfully at {}".format(descriptor_file))
-
-# def parse_arguments():
-#     parser = argparse.ArgumentParser(description='Generate Protobuf descriptor file from .proto file')
-#     parser.add_argument('--proto', type=str, required=True, help='Path to the .proto file')
-#     parser.add_argument('--out', type=str, required=True, help='Path to the output descriptor file')
-#     return parser.parse_args()
-
-# def main():
-#     args = parse_arguments()
-#     generate_descriptor(args.proto, args.out)
-
-# if __name__ == '__main__':
-#     main()
