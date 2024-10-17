@@ -1,0 +1,15 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+
+# Ignore the __pycache__ directory
+__pycache__/
+avro_utils/__pycache__/
+protobuf_utils/__pycache__/
+
+# Ignore other common files
+*.log
+*.tmp
+
+# Ignore myenv
+myenv/
