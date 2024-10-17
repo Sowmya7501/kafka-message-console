@@ -18,7 +18,7 @@ This tool provides functionalities to produce and consume messages in both Proto
 1. Clone the repository
 
 2. Create and activate a virtual environment:
-    ```sh
+    ```bash
     python -m venv myenv
     # On Windows
     myenv\Scripts\activate
@@ -27,13 +27,13 @@ This tool provides functionalities to produce and consume messages in both Proto
     ```
 
 3. Install the required packages:
-    ```sh
+    ```bash
     pip install -r requirements.txt
     ```
 
 ## Usage
-```sh
---format: Specifies the message format. It can be either *avro* or *protobuf*. This flag is required for produce and consume modes.
+```bash
+--format: Specifies the message format. It can be either avro or protobuf. This flag is required for produce and consume modes.
 --brokers: Specifies the Kafka broker address. This flag is required for produce and consume modes.
 --descriptor: Specifies the path to the Protobuf descriptor file. This flag is required for protobuf produce, consume, and validate modes.
 --schema: Specifies the path to the Avro schema file. This flag is required for avro produce and consume modes.
