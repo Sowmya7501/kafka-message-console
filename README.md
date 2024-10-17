@@ -33,6 +33,9 @@ This tool provides functionalities to produce and consume messages in both Proto
 
 ## Usage
 ```bash
+python kafka_message_tool.py [flags]
+
+Flags:
     --format: Specifies the message format. It can be either avro or protobuf. This flag is required for produce and consume modes.
     --brokers: Specifies the Kafka broker address. This flag is required for produce and consume modes.
     --descriptor: Specifies the path to the Protobuf descriptor file. This flag is required for protobuf produce, consume, and validate modes.
